@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
+// Lucide React 아이콘 최적화: 개별 패키지에서 가져오는 대신 메인에서 가져오되, 사용하지 않는 것은 제거
+// (참고: Vercel/Webpack 빌드 최적화를 위해 필요한 아이콘만 명시적으로 확인)
 import { 
   Building2, Scale, Target, Cpu, Zap, Rocket, 
   Users, RefreshCw, Hexagon, Share2, BrainCircuit, 
