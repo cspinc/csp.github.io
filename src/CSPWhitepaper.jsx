@@ -8,7 +8,7 @@ import {
   Landmark, UserCheck, BookOpen, Lightbulb, Server, Code, Database,
   Layers, Lock, Play, Minimize2, Maximize2, Heart,
   Bot, ShoppingBag, Truck, CreditCard, Search, ArrowDown, ScanLine, Laptop,
-  Sprout, Leaf, Map, Store, MessageSquareQuote, Smartphone, RotateCcw,
+  Sprout, Leaf, Map, Store, Smartphone, RotateCcw,
   MousePointerClick, Repeat, ExternalLink, Newspaper, FileText, PieChart
 } from 'lucide-react';
 
@@ -1507,7 +1507,7 @@ const CSPWhitepaper = () => {
            
            <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
               <div className="mb-10 inline-block p-4 rounded-full bg-white/5 border border-white/10">
-                 <MessageSquareQuote size={48} className="text-blue-400" />
+                 <Quote size={48} className="text-blue-400" />
               </div>
                
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-12 leading-tight">
