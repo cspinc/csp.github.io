@@ -6,7 +6,7 @@ import {
   Printer, Download, Quote, Activity, Anchor, MapPin,
   FileCheck, ShieldCheck, BarChart3, Network, Briefcase, History, Award,
   Landmark, UserCheck, BookOpen, Lightbulb, Server, Code, Database,
-  Layers, Lock, Play, Minimize2, Maximize2, Heart, BriefcaseBusiness,
+  Layers, Lock, Play, Minimize2, Maximize2, Heart,
   Bot, ShoppingBag, Truck, CreditCard, Search, ArrowDown, ScanLine, Laptop,
   Sprout, Leaf, Map, Store, MessageSquareQuote, Smartphone, RotateCcw,
   MousePointerClick, Repeat, ExternalLink, Newspaper, FileText, PieChart
@@ -1172,7 +1172,7 @@ const CSPWhitepaper = () => {
                    {[
                       {t: 'CSP 설립', d: '2024.11', i: <Building2 size={20}/>},
                       {t: '투자유치/펀드', d: '2025.3Q', i: <Coins size={20}/>},
-                      {t: 'M&A/지분편입', d: '2025-26', i: <BriefcaseBusiness size={20}/>},
+                      {t: 'M&A/지분편입', d: '2025-26', i: <Briefcase size={20}/>},
                       {t: '상장 (SPAC/BDC)', d: '2027-28', i: <Rocket size={20}/>},
                       {t: '재투자/확장', d: '2028~', i: <RefreshCw size={20}/>},
                    ].map((step, idx) => (
@@ -1327,7 +1327,7 @@ const CSPWhitepaper = () => {
                          <span className="text-[8px] md:text-[10px] text-slate-500 block">Brand</span>
                       </div>
                       <div className="absolute bottom-[10%] right-0 translate-x-2 md:translate-x-4 text-center z-10">
-                         <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-md mb-2 mx-auto text-emerald-600 border border-emerald-50"><BriefcaseBusiness size={16} className="md:w-5 md:h-5"/></div>
+                         <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-md mb-2 mx-auto text-emerald-600 border border-emerald-50"><Briefcase size={16} className="md:w-5 md:h-5"/></div>
                          <strong className="text-xs md:text-sm font-bold text-slate-900 bg-white/80 px-2 rounded">사업</strong>
                          <span className="text-[8px] md:text-[10px] text-slate-500 block">Business</span>
                       </div>
@@ -1370,7 +1370,7 @@ const CSPWhitepaper = () => {
                    </div>
                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-4 items-start group">
                        <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
-                         <BriefcaseBusiness size={24}/>
+                         <Briefcase size={24}/>
                       </div>
                       <div>
                          <h4 className="text-lg font-bold text-slate-900 mb-1">3. 사업 (Business Scale)</h4>
