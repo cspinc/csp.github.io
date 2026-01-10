@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
-// Lucide React 아이콘 최적화: 개별 패키지에서 가져오는 대신 메인에서 가져오되, 사용하지 않는 것은 제거
-// (참고: Vercel/Webpack 빌드 최적화를 위해 필요한 아이콘만 명시적으로 확인)
 import { 
   Building2, Scale, Target, Cpu, Zap, Rocket, 
   Users, RefreshCw, Hexagon, Share2, BrainCircuit, 
@@ -58,6 +55,7 @@ const CSPWhitepaper = () => {
            <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <Lock size={32} className="text-slate-700" />
            </div>
+  
            <h2 className="text-2xl font-black text-slate-900 mb-2">CSP Whitepaper</h2>
            <p className="text-sm text-slate-500 mb-8">보안 문서에 접근하려면 비밀번호를 입력하세요.</p>
            
@@ -70,16 +68,18 @@ const CSPWhitepaper = () => {
                 className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-center font-bold text-slate-900"
                 autoFocus
               />
+   
               {errorMsg && <p className="text-xs text-red-500 font-bold">{errorMsg}</p>}
               <button 
                 type="submit"
                 className="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-colors shadow-lg"
               >
-                Access Document
+               Access Document
               </button>
            </form>
            <p className="text-[10px] text-slate-400 mt-6">
-             Authorized Personnel Only. © 2026 CSP Inc.
+             Authorized Personnel Only.
+             © 2026 CSP Inc.
            </p>
         </div>
       </div>
@@ -100,6 +100,7 @@ const CSPWhitepaper = () => {
               CSP 백서의 방대한 인포그래픽과 데이터 시각화를 온전히 경험하시려면 <br/>
               <strong>화면을 가로로 회전</strong>해 주세요.
            </p>
+         
            <div className="flex items-center gap-2 text-xs text-slate-500 border border-slate-700 px-4 py-2 rounded-full">
               <Smartphone size={14}/> <span>Optimized for Landscape</span>
            </div>
@@ -107,7 +108,7 @@ const CSPWhitepaper = () => {
              onClick={() => setIsPortrait(false)}
              className="mt-12 text-xs text-slate-400 underline underline-offset-4 hover:text-white"
            >
-             세로 모드로 계속 보기 (권장하지 않음)
+              세로 모드로 계속 보기 (권장하지 않음)
            </button>
         </div>
       )}
@@ -153,7 +154,7 @@ const CSPWhitepaper = () => {
           </h1>
           
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start lg:items-end justify-between border-t border-slate-200 pt-8 md:pt-10">
-            <p className="text-lg md:text-2xl text-slate-600 leading-relaxed max-w-2xl font-medium">
+             <p className="text-lg md:text-2xl text-slate-600 leading-relaxed max-w-2xl font-medium">
               우리는 도시를 개발(Develop)하지 않고,<br/> 
               도시를 <span className="bg-blue-100 text-blue-900 px-2 font-bold inline-block transform -skew-x-6">경영(Manage)</span>하는 벤처 스튜디오입니다.
             </p>
@@ -161,7 +162,7 @@ const CSPWhitepaper = () => {
             <div className="flex gap-2 md:gap-3 flex-wrap">
                {['Venture Studio', 'Web3 Governance', 'Local Alliance'].map((tag, idx) => (
                   <span key={idx} className="px-3 py-1.5 md:px-4 md:py-2 rounded-full text-[10px] md:text-xs font-bold border flex items-center gap-2 bg-white text-slate-600 border-slate-200 shadow-sm">
-                      {tag}
+                    {tag}
                   </span>
                ))}
             </div>
@@ -179,7 +180,7 @@ const CSPWhitepaper = () => {
 
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
             <div className="w-full lg:w-1/3 relative mt-4 lg:mt-0">
-                <div className="aspect-[3/3.5] rounded-[2rem] bg-slate-100 overflow-hidden relative shadow-2xl border-4 border-white ring-1 ring-slate-200 z-0 group">
+               <div className="aspect-[3/3.5] rounded-[2rem] bg-slate-100 overflow-hidden relative shadow-2xl border-4 border-white ring-1 ring-slate-200 z-0 group">
                       <div className="absolute inset-0 bg-gradient-to-b from-slate-200 to-slate-800 flex items-end justify-center">
                          <Users size={120} className="md:w-[180px] md:h-[180px] text-slate-400 mb-10 opacity-50 group-hover:scale-105 transition-transform duration-700" />
                       </div>
@@ -190,15 +191,15 @@ const CSPWhitepaper = () => {
                 </div>
                 
                 <div className="absolute -right-2 md:-right-4 top-8 bg-white p-4 md:p-5 rounded-2xl shadow-xl border border-slate-100 max-w-[140px] md:max-w-[180px] animate-bounce-slow z-30">
-                    <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2 mb-2">
                         <Briefcase size={16} className="text-blue-600 md:w-[18px] md:h-[18px]"/>
                         <span className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">Experience</span>
-                    </div>
+                  </div>
                     <strong className="block text-2xl md:text-3xl font-black text-slate-900 leading-none">15<span className="text-base md:text-lg">+</span></strong>
                     <span className="text-[10px] md:text-xs text-slate-500 font-medium">Years as VC</span>
                 </div>
                 
-                <div className="absolute -left-2 md:-left-4 bottom-20 md:bottom-24 bg-white p-4 md:p-5 rounded-2xl shadow-xl border border-slate-100 max-w-[160px] md:max-w-[200px] text-right z-30">
+                 <div className="absolute -left-2 md:-left-4 bottom-20 md:bottom-24 bg-white p-4 md:p-5 rounded-2xl shadow-xl border border-slate-100 max-w-[160px] md:max-w-[200px] text-right z-30">
                      <div className="flex items-center gap-2 justify-end mb-2">
                         <span className="text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-wider">AUM</span>
                         <Coins size={16} className="text-emerald-600 md:w-[18px] md:h-[18px]"/>
@@ -225,13 +226,15 @@ const CSPWhitepaper = () => {
                         "왜 로컬에는 유니콘이 나오지 않을까?"
                     </p>
                     <p>
-                        지난 15년간 벤처캐피털리스트(VC)로 일하며 수많은 기업의 성장을 지켜봤습니다. 
-                        하지만 실리콘밸리식 <strong>'빠른 성장과 회수(Exit)'</strong> 모델은 지역 경제에 그대로 적용하기 어려웠습니다. 
+                        지난 15년간 벤처캐피털리스트(VC)로 일하며 수많은 기업의 성장을 지켜봤습니다.
+                        하지만 실리콘밸리식 <strong>'빠른 성장과 회수(Exit)'</strong> 모델은 지역 경제에 그대로 적용하기 어려웠습니다.
                         단기간의 성과를 위해 자본이 투입되지만, 결국 그 과실은 외부로 유출되는 <strong>'자본 유출(Capital Leakage)'</strong>의 한계를 목격했기 때문입니다.
                     </p>
                     <p>
-                        우리에게 필요한 건 혼자 빨리 달리는 유니콘이 아닙니다. 무리 지어 서로를 지키며 지역에 깊게 뿌리내리는 
-                        <strong>'지브라(Zebra)'</strong> 기업입니다. CSP는 단순한 투자사가 아닌, <strong>도시를 경영하는 벤처 스튜디오</strong>로서 
+                        우리에게 필요한 건 혼자 빨리 달리는 유니콘이 아닙니다.
+                        무리 지어 서로를 지키며 지역에 깊게 뿌리내리는 
+                        <strong>'지브라(Zebra)'</strong> 기업입니다.
+                        CSP는 단순한 투자사가 아닌, <strong>도시를 경영하는 벤처 스튜디오</strong>로서 
                         좋은 기업을 키워 좋은 도시를 만드는 여정을 시작합니다.
                     </p>
                 </div>
@@ -248,10 +251,10 @@ const CSPWhitepaper = () => {
                                 '(전) 센트럴투자파트너스 투자본부장',
                                 '(전) 웰컴벤처스 투자본부장',
                                 '누적 20개 이상 기업 스케일업 완료'
-                            ].map((item, i) => (
+                             ].map((item, i) => (
                                 <li key={i} className="flex gap-3 text-xs md:text-sm text-slate-600 font-medium items-start">
                                     <span className="w-1.5 h-1.5 rounded-full bg-slate-300 mt-2 shrink-0"></span>
-                                    {item}
+                                     {item}
                                 </li>
                             ))}
                         </ul>
@@ -262,7 +265,7 @@ const CSPWhitepaper = () => {
                         </h4>
                         <ul className="space-y-3 md:space-y-4">
                             {[
-                                <span key="keynote"><strong>'다음 유니콘은 로컬에서 나온다'</strong> 키노트 (2018)</span>,
+                                 <span key="keynote"><strong>'다음 유니콘은 로컬에서 나온다'</strong> 키노트 (2018)</span>,
                                 '제주창조경제혁신센터 J-Connect Day 리드',
                                 '중기부 강한소상공인 지원사업 심사위원',
                                 '2023 올댓트래블 컨퍼런스 키노트',
@@ -273,7 +276,7 @@ const CSPWhitepaper = () => {
                                     {item}
                                 </li>
                             ))}
-                        </ul>
+                         </ul>
                     </div>
                 </div>
             </div>
@@ -282,7 +285,7 @@ const CSPWhitepaper = () => {
 
         {/* --- 01. COMPANY OVERVIEW --- */}
         <section className="py-16 md:py-24 border-b border-slate-100">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             
             <div className="lg:col-span-4">
               <span className="text-blue-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-3 flex items-center gap-2">
@@ -290,7 +293,8 @@ const CSPWhitepaper = () => {
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Corporate<br/>Profile</h2>
               <p className="text-slate-600 leading-relaxed mb-8 text-sm">
-                CSP는 단순한 투자사(VC)가 아닙니다. <br/>
+                CSP는 단순한 투자사(VC)가 아닙니다.
+                <br/>
                 자본과 인력을 직접 투입해 로컬의 문제를 비즈니스로 해결하는 <strong>Company Builder</strong>이자, 지역 생태계 전체를 설계하는 <strong>Ecosystem Architect</strong>입니다.
               </p>
               
@@ -346,10 +350,10 @@ const CSPWhitepaper = () => {
                         <div className="space-y-2 pt-1">
                            <div className="text-xs">
                               <strong className="block text-slate-700">이혜선 팀장 (PhD)</strong>
-                              <span className="text-slate-500 text-[10px] block mt-1">홍익대 디자인공학박사, 로컬 프로젝트 및 브랜드 전략 전문가 (전 부여 지음 대표)</span>
+                                <span className="text-slate-500 text-[10px] block mt-1">홍익대 디자인공학박사, 로컬 프로젝트 및 브랜드 전략 전문가 (전 부여 지음 대표)</span>
                            </div>
                            <div className="text-xs border-t border-slate-50 pt-2 mt-2">
-                              <strong className="block text-slate-700">최민주 PM</strong>
+                               <strong className="block text-slate-700">최민주 PM</strong>
                               <span className="text-slate-500 text-[10px] block mt-1">로봇/IT 스타트업 출신 BX 디자이너, 미들스튜디오 공동창업자</span>
                            </div>
                         </div>
@@ -358,7 +362,7 @@ const CSPWhitepaper = () => {
                </div>
 
                <div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+                   <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                       <Lightbulb size={20} className="text-amber-500"/> Advisors
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -387,7 +391,8 @@ const CSPWhitepaper = () => {
                   <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
                       <ShieldCheck size={20} className="text-blue-600"/> Board of Directors
                   </h3>
-                  <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-lg grid grid-cols-2 md:grid-cols-4 gap-6">
+                
+                   <div className="bg-slate-900 text-white p-6 rounded-2xl shadow-lg grid grid-cols-2 md:grid-cols-4 gap-6">
                      <div>
                         <span className="text-xs text-slate-400 block mb-1">Director</span>
                         <strong className="block text-white mb-1">최도인</strong>
@@ -395,7 +400,7 @@ const CSPWhitepaper = () => {
                      </div>
                      <div>
                         <span className="text-xs text-slate-400 block mb-1">Director</span>
-                        <strong className="block text-white mb-1">김혁주</strong>
+                         <strong className="block text-white mb-1">김혁주</strong>
                         <span className="text-[10px] text-slate-500 block">비로컬(BELOCAL) 대표</span>
                      </div>
                      <div>
@@ -413,24 +418,24 @@ const CSPWhitepaper = () => {
 
                <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-100">
                   <div className="flex flex-col md:flex-row gap-6 items-center">
-                     <div className="md:w-1/3 text-center md:text-left">
+                      <div className="md:w-1/3 text-center md:text-left">
                         <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-2 block">Anchor Partner</span>
                         <h4 className="text-2xl font-black text-slate-900 mb-1">METAA</h4>
                         <span className="text-xs text-slate-500">(주)메타기획컨설팅</span>
                         <div className="mt-3 inline-block px-3 py-1 bg-white rounded-full text-xs font-bold text-emerald-700 shadow-sm border border-emerald-200">
                            since 1989
                         </div>
-                     </div>
+                      </div>
                      <div className="md:w-2/3 border-t md:border-t-0 md:border-l border-emerald-200 pt-4 md:pt-0 md:pl-6">
                         <p className="text-sm text-slate-600 mb-3 leading-relaxed">
                            35년간 축적된 도시·문화·공간 분야의 독보적 노하우를 보유한 지식 기반 컨설팅 기업입니다. CSP의 <strong>지역 생태계 설계 및 방법론</strong>을 뒷받침합니다.
                         </p>
                         <div className="flex gap-2 flex-wrap">
                            <span className="text-[10px] bg-white px-2 py-1 rounded border border-emerald-100 text-slate-500 flex items-center gap-1">
-                              <BookOpen size={10}/> LICORN KPI (나비성장모델)
+                               <BookOpen size={10}/> LICORN KPI (나비성장모델)
                            </span>
                            <span className="text-[10px] bg-white px-2 py-1 rounded border border-emerald-100 text-slate-500 flex items-center gap-1">
-                              <MapPin size={10}/> SMCM (입지선정모형)
+                               <MapPin size={10}/> SMCM (입지선정모형)
                            </span>
                         </div>
                      </div>
@@ -445,12 +450,13 @@ const CSPWhitepaper = () => {
         <section className="py-16 md:py-24 border-b border-slate-100">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-4">
-              <span className="text-blue-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-3 flex items-center gap-2">
+               <span className="text-blue-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-3 flex items-center gap-2">
                 <span className="w-8 h-px bg-blue-600"></span> 02 Mission
               </span>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Redefining<br/>Urban Growth</h2>
               <p className="text-slate-600 leading-relaxed mb-6 text-sm">
-                지방 소멸의 본질은 단순 인구 감소가 아닙니다. 지역에서 창출된 부가가치가 역외로 유출되는 <strong>'자본 추출(Extraction Economy)'</strong> 구조가 문제입니다.
+                 지방 소멸의 본질은 단순 인구 감소가 아닙니다.
+                 지역에서 창출된 부가가치가 역외로 유출되는 <strong>'자본 추출(Extraction Economy)'</strong> 구조가 문제입니다.
               </p>
               <div className="bg-blue-50 p-5 rounded-2xl border border-blue-100">
                  <strong className="text-blue-800 text-sm block mb-2">CSP's Mission</strong>
@@ -463,31 +469,31 @@ const CSPWhitepaper = () => {
             <div className="lg:col-span-8">
                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="bg-slate-50 p-8 rounded-3xl border border-slate-200 relative overflow-hidden group hover:border-slate-300 transition-colors">
-                     <div className="absolute top-0 right-0 p-4 opacity-10">
+                      <div className="absolute top-0 right-0 p-4 opacity-10">
                         <Minimize2 size={120} />
                      </div>
                      <h4 className="text-lg font-bold text-slate-500 mb-4 flex items-center gap-2">
-                        <Activity size={18}/> The Crisis
+                         <Activity size={18}/> The Crisis
                      </h4>
                      <h3 className="text-2xl font-black text-slate-400 mb-6 group-hover:text-slate-500 transition-colors">Extraction Economy</h3>
                      <ul className="space-y-4 relative z-10">
-                        <li className="flex items-start gap-3">
+                         <li className="flex items-start gap-3">
                            <div className="w-6 h-6 rounded bg-slate-200 flex items-center justify-center text-slate-400 shrink-0"><ArrowRight size={14} className="-rotate-45"/></div>
                            <div>
-                              <strong className="block text-slate-600 text-sm">Capital Leakage</strong>
+                               <strong className="block text-slate-600 text-sm">Capital Leakage</strong>
                               <p className="text-xs text-slate-400">지역 수익의 본사(서울) 송금 및 유출</p>
                            </div>
                         </li>
                         <li className="flex items-start gap-3">
                            <div className="w-6 h-6 rounded bg-slate-200 flex items-center justify-center text-slate-400 shrink-0"><Users size={14}/></div>
                            <div>
-                              <strong className="block text-slate-600 text-sm">Talent Drain</strong>
+                                <strong className="block text-slate-600 text-sm">Talent Drain</strong>
                               <p className="text-xs text-slate-400">청년 인재의 수도권 이탈 가속화</p>
                            </div>
-                        </li>
+                         </li>
                         <li className="flex items-start gap-3">
                            <div className="w-6 h-6 rounded bg-slate-200 flex items-center justify-center text-slate-400 shrink-0"><Server size={14}/></div>
-                           <div>
+                            <div>
                               <strong className="block text-slate-600 text-sm">Infra Limit</strong>
                               <p className="text-xs text-slate-400">도시 인프라 수용력 한계 및 양극화</p>
                            </div>
@@ -496,25 +502,25 @@ const CSPWhitepaper = () => {
                   </div>
 
                   <div className="bg-slate-900 p-8 rounded-3xl text-white shadow-2xl relative overflow-hidden transform md:scale-105 border border-slate-700">
-                     <div className="absolute top-0 right-0 p-4 opacity-10 text-emerald-400">
+                      <div className="absolute top-0 right-0 p-4 opacity-10 text-emerald-400">
                         <Maximize2 size={120} />
                      </div>
                      <h4 className="text-lg font-bold text-emerald-400 mb-4 flex items-center gap-2">
-                        <RefreshCw size={18}/> The Solution
+                         <RefreshCw size={18}/> The Solution
                      </h4>
                      <h3 className="text-2xl font-black text-white mb-6">Venture Studio</h3>
                      <ul className="space-y-4 relative z-10">
-                        <li className="flex items-start gap-3">
+                         <li className="flex items-start gap-3">
                            <div className="w-6 h-6 rounded bg-blue-600 flex items-center justify-center text-white shrink-0"><Hexagon size={14}/></div>
                            <div>
-                              <strong className="block text-white text-sm">Company Building</strong>
+                               <strong className="block text-white text-sm">Company Building</strong>
                               <p className="text-xs text-slate-400">직접 자본·인력 투입을 통한 주도적 성장</p>
                            </div>
                         </li>
                         <li className="flex items-start gap-3">
                            <div className="w-6 h-6 rounded bg-emerald-500 flex items-center justify-center text-white shrink-0"><Scale size={14}/></div>
                            <div>
-                              <strong className="block text-white text-sm">Local Zebra</strong>
+                               <strong className="block text-white text-sm">Local Zebra</strong>
                               <p className="text-xs text-slate-400">수익(Profit)과 사회적 가치(Impact) 동시 추구</p>
                            </div>
                         </li>
@@ -537,7 +543,7 @@ const CSPWhitepaper = () => {
           <div className="max-w-4xl mx-auto">
              <div className="text-center mb-16">
                 <span className="text-emerald-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-3">03 Philosophy</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Triple Circulation Model</h2>
+                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Triple Circulation Model</h2>
                 <p className="text-slate-600 text-sm md:text-base leading-relaxed">
                    CSP는 <strong>"한국형 첼시마켓"</strong> 모델을 지향합니다.<br/>
                    <span className="text-emerald-600 font-bold">TCJTC(Traffic-Capital-Jobs-Traffic-Capital)</span> 모델을 통해 지역 내 자본과 인재가 순환하는 생태계를 구축합니다.
@@ -548,23 +554,22 @@ const CSPWhitepaper = () => {
                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-gradient-to-r from-emerald-200 via-blue-200 to-pink-200 -z-10 hidden md:block border-t border-dashed border-slate-300"></div>
                
                {[
-                 { l: 'J', t: 'Jobs', d: '지역 혁신가(Local Creator)를 발굴하여 지역에 정착하는 양질의 일자리를 창출합니다.', colorName: 'emerald' },
+                  { l: 'J', t: 'Jobs', d: '지역 혁신가(Local Creator)를 발굴하여 지역에 정착하는 양질의 일자리를 창출합니다.', colorName: 'emerald' },
                  { l: 'T', t: 'Traffic', d: '매력적인 앵커 공간(Space)과 콘텐츠로 외부 방문객 유입을 극대화합니다.', colorName: 'blue' },
                  { l: 'C', t: 'Capital', d: '창출된 수익을 지역 펀드와 프로젝트에 재투자하여 자본 유출을 막습니다.', colorName: 'pink' }
                ].map((item, idx) => {
                  const bgClass = item.colorName === 'emerald' ? 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600' :
                                  item.colorName === 'blue' ? 'bg-blue-50 text-blue-600 group-hover:bg-blue-600' :
-                                 'bg-pink-50 text-pink-600 group-hover:bg-pink-600';
-                 
+                                  'bg-pink-50 text-pink-600 group-hover:bg-pink-600';
                  return (
                    <div key={idx} className={`bg-white p-8 rounded-3xl shadow-lg border border-slate-100 text-center relative group hover:-translate-y-2 transition-transform duration-300`}>
                       <div className={`w-14 h-14 rounded-2xl mx-auto flex items-center justify-center font-black text-2xl mb-4 shadow-sm group-hover:text-white transition-colors ${bgClass}`}>
                          {item.l}
-                      </div>
+                        </div>
                       <h3 className="text-xl font-bold text-slate-900 mb-2">{item.t}</h3>
                       <p className="text-sm text-slate-500 leading-relaxed">{item.d}</p>
                    </div>
-                 );
+                  );
                })}
              </div>
 
@@ -573,14 +578,14 @@ const CSPWhitepaper = () => {
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
                    <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4 block">Benchmark Analysis</span>
                    <h3 className="text-2xl font-bold text-slate-900 mb-4">Why Chelsea Market?</h3>
-                   <div className="space-y-4">
+                    <div className="space-y-4">
                       <div className="flex gap-4">
                          <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-slate-500"><History size={18}/></div>
                          <div>
                             <strong className="block text-slate-900 text-sm">역사적 자산의 재해석</strong>
                             <p className="text-xs text-slate-500 leading-relaxed">폐쇄된 과자공장(Nabisco)을 로컬 푸드홀과 오피스로 재생하여 지역의 랜드마크로 전환 (연 600만 트래픽)</p>
                          </div>
-                      </div>
+                       </div>
                       <div className="flex gap-4">
                          <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-slate-500"><Users size={18}/></div>
                          <div>
@@ -590,7 +595,7 @@ const CSPWhitepaper = () => {
                       </div>
                       <div className="flex gap-4">
                          <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center shrink-0 text-slate-500"><TrendingUp size={18}/></div>
-                         <div>
+                          <div>
                             <strong className="block text-slate-900 text-sm">가치 상승과 회수</strong>
                             <p className="text-xs text-slate-500 leading-relaxed">2018년 구글에 약 24억 달러 매각. 로컬의 가치를 글로벌 자본으로 환산한 대표적 사례</p>
                          </div>
@@ -602,14 +607,14 @@ const CSPWhitepaper = () => {
                    <div className="relative z-10">
                       <span className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-4 block">CSP Strategy</span>
                       <h3 className="text-2xl font-bold text-white mb-6">Korean Model</h3>
-                      <ul className="space-y-4 text-sm text-slate-300">
+                       <ul className="space-y-4 text-sm text-slate-300">
                          <li className="flex items-center gap-3"><CheckCircle2 className="text-emerald-500"/> 유휴 공간 및 지역 자산 매입/임대</li>
                          <li className="flex items-center gap-3"><CheckCircle2 className="text-emerald-500"/> 앵커 콘텐츠(F&B, Stay) 직접 운영</li>
                          <li className="flex items-center gap-3"><CheckCircle2 className="text-emerald-500"/> 로컬 브랜드 입점 및 인큐베이팅</li>
                          <li className="flex items-center gap-3"><CheckCircle2 className="text-emerald-500"/> 지역 펀드 조성을 통한 지속 성장</li>
                       </ul>
                    </div>
-                   <div className="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
+                    <div className="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
                       {/* Layout icon is usually grid based */}
                       <div className="w-40 h-40 border-4 border-white grid grid-cols-2">
                         <div className="border border-white/50"></div>
@@ -623,11 +628,11 @@ const CSPWhitepaper = () => {
 
              {/* Global Benchmarks (Existing) */}
              <div className="bg-white rounded-2xl border border-slate-200 p-8">
-                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-6 text-center">Other Global Models</h4>
+                 <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-6 text-center">Other Global Models</h4>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
                    <div className="pt-4 md:pt-0">
                       <strong className="block text-slate-900 text-lg mb-1">Urban Splash</strong>
-                      <span className="text-xs text-slate-400 block mb-2">Manchester, UK</span>
+                       <span className="text-xs text-slate-400 block mb-2">Manchester, UK</span>
                       <p className="text-xs text-slate-500">유휴 산업시설을 주거·문화 복합공간으로 재생</p>
                    </div>
                    <div className="pt-4 md:pt-0 md:pl-4">
@@ -635,11 +640,11 @@ const CSPWhitepaper = () => {
                       <span className="text-xs text-slate-400 block mb-2">Las Vegas, USA</span>
                       <p className="text-xs text-slate-500">구도심에 3.5억 달러를 투자해 스타트업 도시 건설</p>
                    </div>
-                   <div className="pt-4 md:pt-0 md:pl-4">
+                    <div className="pt-4 md:pt-0 md:pl-4">
                       <strong className="block text-slate-900 text-lg mb-1">Hauser & Wirth</strong>
                       <span className="text-xs text-slate-400 block mb-2">Zurich, Swiss</span>
                       <p className="text-xs text-slate-500">양조장을 갤러리 복합문화공간으로 재생</p>
-                   </div>
+                    </div>
                 </div>
              </div>
           </div>
@@ -648,11 +653,11 @@ const CSPWhitepaper = () => {
         {/* --- 04. STRATEGY (Venture Studio) --- */}
         <section className="py-16 md:py-24 border-b border-slate-100">
            <div className="max-w-5xl mx-auto">
-              <div className="text-center mb-16">
+               <div className="text-center mb-16">
                  <span className="text-violet-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-3">04 Strategy</span>
                  <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Venture Studio Methodology</h2>
                  <p className="text-slate-600 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-                    CSP는 단순 투자를 넘어, 아이디어 발굴부터 설립, 운영, 확장, 회수까지 전 과정을 함께하는 <strong>'Company Builder'</strong>입니다.
+                     CSP는 단순 투자를 넘어, 아이디어 발굴부터 설립, 운영, 확장, 회수까지 전 과정을 함께하는 <strong>'Company Builder'</strong>입니다.
                  </p>
               </div>
 
@@ -679,18 +684,19 @@ const CSPWhitepaper = () => {
                        </li>
                     </ul>
                  </div>
-                 <div className="bg-violet-600 p-8 rounded-3xl text-white shadow-xl transform md:scale-105 relative">
+                
+                <div className="bg-violet-600 p-8 rounded-3xl text-white shadow-xl transform md:scale-105 relative">
                     <div className="absolute top-4 right-4 bg-white/20 px-2 py-1 rounded text-[10px] font-bold">CSP Model</div>
                     <h4 className="text-lg font-bold text-white mb-4">Venture Studio</h4>
                     <ul className="space-y-4 text-sm text-violet-100">
-                       <li className="flex justify-between border-b border-violet-500 pb-2">
+                        <li className="flex justify-between border-b border-violet-500 pb-2">
                           <span>개입 시점</span>
                           <span className="font-bold text-white">설립 전 (Zero to One)</span>
                        </li>
-                       <li className="flex justify-between border-b border-violet-500 pb-2">
+                        <li className="flex justify-between border-b border-violet-500 pb-2">
                           <span>자본 투입</span>
                           <span className="font-bold text-white">지속적 자본/인력 투입</span>
-                       </li>
+                        </li>
                        <li className="flex justify-between border-b border-violet-500 pb-2">
                           <span>주요 역할</span>
                           <span className="font-bold text-white">직접 설계 및 공동 경영</span>
@@ -698,7 +704,7 @@ const CSPWhitepaper = () => {
                        <li className="flex justify-between">
                           <span>목표</span>
                           <span className="font-bold text-white">그룹 가치 & 지속 성장</span>
-                       </li>
+                        </li>
                     </ul>
                  </div>
               </div>
@@ -709,7 +715,7 @@ const CSPWhitepaper = () => {
                     <Layers className="text-violet-600"/> 3-Track Scale-up Process
                  </h3>
                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-violet-300 transition-colors">
+                     <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-violet-300 transition-colors">
                        <div className="w-10 h-10 bg-violet-100 text-violet-600 rounded-lg flex items-center justify-center mb-4"><Hexagon size={20}/></div>
                        <strong className="block text-slate-900 mb-2">1. 직접 사업 (Direct)</strong>
                        <p className="text-xs text-slate-500 leading-relaxed mb-3">100% 인수합병(M&A) 및 직접 경영. 메루치양식장, 지역 편집숍 등 직접 투자/운영하여 기업 가치 제고.</p>
@@ -722,7 +728,7 @@ const CSPWhitepaper = () => {
                        <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded">수익 창출 (Profit)</span>
                     </div>
                     <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm hover:border-violet-300 transition-colors">
-                       <div className="w-10 h-10 bg-violet-100 text-violet-600 rounded-lg flex items-center justify-center mb-4"><Users size={20}/></div>
+                        <div className="w-10 h-10 bg-violet-100 text-violet-600 rounded-lg flex items-center justify-center mb-4"><Users size={20}/></div>
                        <strong className="block text-slate-900 mb-2">3. 컨설팅 (Consulting)</strong>
                        <p className="text-xs text-slate-500 leading-relaxed mb-3">브랜드/경영/재무 맞춤형 솔루션. 행궁동 주차장 BTO, 제주 우무 등 성장 지원 및 커뮤니티 형성.</p>
                        <span className="text-[10px] font-bold bg-slate-100 text-slate-600 px-2 py-1 rounded">커뮤니티 형성</span>
@@ -738,11 +744,11 @@ const CSPWhitepaper = () => {
                        <h3 className="text-lg font-bold mb-6 flex items-center gap-2">
                           <MapPin className="text-blue-400"/> CSP Worldview (점·선·면)
                        </h3>
-                       
+                  
                        {/* SVG Diagram for Dot-Line-Plane */}
                        <div className="w-full aspect-[4/3] relative mb-6">
                           <svg className="w-full h-full" viewBox="0 0 400 300">
-                             {/* Defs for gradients/markers */}
+                              {/* Defs for gradients/markers */}
                              <defs>
                                 <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
                                    <path d="M0,0 L0,6 L9,3 z" fill="#60A5FA" />
@@ -754,21 +760,21 @@ const CSPWhitepaper = () => {
                              </defs>
 
                              {/* Step 1: Dots (Scattered) */}
-                             <g className="animate-pulse-slow">
+                            <g className="animate-pulse-slow">
                                 <circle cx="50" cy="250" r="4" fill="#3B82F6" />
                                 <circle cx="120" cy="220" r="4" fill="#3B82F6" />
                                 <circle cx="80" cy="280" r="4" fill="#3B82F6" />
                                 <text x="50" y="270" fill="#94A3B8" fontSize="10" textAnchor="middle">Brand</text>
                              </g>
 
-                             {/* Step 2: Lines (Connecting) */}
+                              {/* Step 2: Lines (Connecting) */}
                              <g opacity="0.6">
                                 <line x1="50" y1="250" x2="120" y2="220" stroke="#60A5FA" strokeWidth="1" strokeDasharray="4 4" />
                                 <line x1="120" y1="220" x2="200" y2="150" stroke="#60A5FA" strokeWidth="1" strokeDasharray="4 4" />
                                 <line x1="80" y1="280" x2="120" y2="220" stroke="#60A5FA" strokeWidth="1" strokeDasharray="4 4" />
                              </g>
 
-                             {/* Step 3: Plane (Area/City) */}
+                              {/* Step 3: Plane (Area/City) */}
                              <path d="M180,50 L350,50 L350,200 L200,200 Z" fill="rgba(59, 130, 246, 0.1)" stroke="#3B82F6" strokeWidth="2" />
                              <text x="265" y="130" fill="white" fontSize="14" fontWeight="bold" textAnchor="middle">CITY (면)</text>
                              <text x="265" y="150" fill="#94A3B8" fontSize="10" textAnchor="middle">Sustainable Ecosystem</text>
@@ -779,16 +785,16 @@ const CSPWhitepaper = () => {
                        </div>
 
                        <div className="space-y-4 text-sm text-slate-300">
-                          <div className="flex gap-3">
+                           <div className="flex gap-3">
                              <div className="w-6 h-6 rounded bg-blue-900/50 border border-blue-500 flex items-center justify-center shrink-0 font-bold text-xs">1</div>
                              <p><strong className="text-white">점 (Dot):</strong> 지역 곳곳의 잠재력 있는 브랜드와 혁신가를 발굴합니다.</p>
-                          </div>
+                           </div>
                           <div className="flex gap-3">
                              <div className="w-6 h-6 rounded bg-blue-900/50 border border-blue-500 flex items-center justify-center shrink-0 font-bold text-xs">2</div>
                              <p><strong className="text-white">선 (Line):</strong> 점들을 연결하여 거리(Street)를 만들고 협업 네트워크를 구축합니다.</p>
                           </div>
                           <div className="flex gap-3">
-                             <div className="w-6 h-6 rounded bg-blue-900/50 border border-blue-500 flex items-center justify-center shrink-0 font-bold text-xs">3</div>
+                              <div className="w-6 h-6 rounded bg-blue-900/50 border border-blue-500 flex items-center justify-center shrink-0 font-bold text-xs">3</div>
                              <p><strong className="text-white">면 (Plane):</strong> 선들이 모여 도시(City) 생태계를 완성하고 자립형 경제를 만듭니다.</p>
                           </div>
                        </div>
@@ -797,7 +803,7 @@ const CSPWhitepaper = () => {
 
                  <div className="bg-white border border-slate-200 p-8 rounded-3xl">
                     <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2"><TrendingUp className="text-emerald-600"/> 3-Stage Roadmap</h3>
-                    <ul className="space-y-6 relative">
+                     <ul className="space-y-6 relative">
                        <div className="absolute left-[11px] top-2 bottom-2 w-0.5 bg-slate-100"></div>
                        <li className="flex gap-4 relative">
                           <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 border-2 border-white z-10">1</div>
@@ -809,7 +815,7 @@ const CSPWhitepaper = () => {
                                 <p>• <strong>M&A:</strong> 1차 연계기업(지역경영회사) 인수 및 지분 확보</p>
                                 <p>• <strong>기술:</strong> 데이터 표준화 및 AI 수요예측 파일럿</p>
                              </div>
-                          </div>
+                         </div>
                        </li>
                        <li className="flex gap-4 relative">
                           <div className="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 border-2 border-white z-10">2</div>
@@ -821,26 +827,26 @@ const CSPWhitepaper = () => {
                                 <p>• <strong>펀드:</strong> 지역성장펀드 결성 및 자회사 지분 펀드 편입</p>
                                 <p>• <strong>시스템:</strong> 운영 대시보드 오픈 및 온체인 정산 도입</p>
                              </div>
-                          </div>
+                           </div>
                        </li>
                        <li className="flex gap-4 relative">
                           <div className="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold shrink-0 border-2 border-white z-10">3</div>
                           <div>
                              <strong className="block text-sm text-slate-900">도시 개발 (City Dev) - 2027~</strong>
                              <div className="text-xs text-slate-500 mt-1 space-y-1">
-                                <p className="mb-1"><strong>"무엇을(What): 자생적 도시 생태계를 완성한다."</strong></p>
+                                 <p className="mb-1"><strong>"무엇을(What): 자생적 도시 생태계를 완성한다."</strong></p>
                                 <p>• <strong>Exit 전략:</strong> SPAC 합병 상장(2027) / BDC 상장(2028)</p>
                                 <p>• <strong>글로벌:</strong> 크로스보더 플랫폼 전면 가동</p>
                                 <p>• <strong>완성:</strong> 자립형 도시 생태계 구축 및 재투자 선순환</p>
                              </div>
-                          </div>
+                         </div>
                        </li>
                     </ul>
                  </div>
               </div>
 
            </div>
-        </section>
+       </section>
 
         {/* --- 05. TECHNOLOGY (TIPS & WEB3) --- */}
         <section className="py-16 md:py-24 border-b border-slate-100 overflow-hidden relative">
@@ -857,21 +863,21 @@ const CSPWhitepaper = () => {
                      <div className="bg-gradient-to-r from-blue-700 to-cyan-600 text-white px-5 py-2.5 rounded-xl shadow-xl shadow-cyan-200/50 flex items-center gap-3">
                         <div className="bg-white/20 p-1.5 rounded-full"><Rocket size={16} fill="currentColor"/></div>
                         <div>
-                           <strong className="block text-sm font-black leading-tight">TIPS 선정 기업</strong>
+                            <strong className="block text-sm font-black leading-tight">TIPS 선정 기업</strong>
                            <span className="text-[10px] font-medium opacity-90 block">정부 선정 기술 창업 기업</span>
                         </div>
-                     </div>
+                    </div>
                   </div>
                </div>
                
                <span className="text-cyan-600 font-bold text-xs md:text-sm tracking-widest uppercase block mb-3 flex items-center gap-2">
                   <Zap size={16} fill="currentColor"/> 05 Technology
-               </span>
+                </span>
                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 mb-8 leading-tight">
                  Tech-Driven<br/>Scale-up
                </h2>
                <p className="text-slate-600 text-sm leading-relaxed mb-8">
-                 로컬 비즈니스의 고질적 문제인 '낮은 확장성'과 '불투명성'을 <strong>AI와 Web3</strong> 기술로 혁신합니다.
+                  로컬 비즈니스의 고질적 문제인 '낮은 확장성'과 '불투명성'을 <strong>AI와 Web3</strong> 기술로 혁신합니다.
                </p>
                <div className="flex flex-col gap-4">
                   <div className="flex items-center gap-3 p-4 bg-white/50 rounded-xl border-2 border-cyan-100 shadow-sm hover:border-cyan-400 transition-colors">
@@ -921,22 +927,22 @@ const CSPWhitepaper = () => {
                              <div className="hidden md:block absolute top-1/2 -right-3 text-slate-300 z-10 bg-white rounded-full p-0.5"><ArrowRight size={14}/></div>
                           </div>
 
-                          <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col items-center text-center relative group-hover:bg-cyan-50/30 transition-colors">
+                           <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col items-center text-center relative group-hover:bg-cyan-50/30 transition-colors">
                              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-500 shadow-sm mb-3 border border-slate-100"><ScanLine size={18}/></div>
-                             <strong className="text-sm text-slate-900 mb-1">2. 마켓 연동</strong>
+                              <strong className="text-sm text-slate-900 mb-1">2. 마켓 연동</strong>
                              <div className="text-[10px] text-slate-500 space-y-1">
                                 <p>카테고리 자동 매칭</p>
                                 <p>옵션/속성 자동 추출</p>
                              </div>
                              <div className="mt-3 text-[9px] font-mono bg-white px-2 py-1 rounded border border-slate-200 text-slate-400">
-                                BERT / FastText
+                                 BERT / FastText
                              </div>
                              <div className="hidden md:block absolute top-1/2 -right-3 text-slate-300 z-10 bg-white rounded-full p-0.5"><ArrowRight size={14}/></div>
                           </div>
 
                           <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-col items-center text-center relative group-hover:bg-cyan-50/30 transition-colors">
                              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-500 shadow-sm mb-3 border border-slate-100"><Truck size={18}/></div>
-                             <strong className="text-sm text-slate-900 mb-1">3. 판매/배송</strong>
+                              <strong className="text-sm text-slate-900 mb-1">3. 판매/배송</strong>
                              <div className="text-[10px] text-slate-500 space-y-1">
                                 <p>OCR 상품 자동 등록</p>
                                 <p>판매 수요 예측</p>
@@ -954,19 +960,19 @@ const CSPWhitepaper = () => {
                        
                        <div className="border-t border-slate-100 pt-4">
                           <div className="flex justify-between text-[10px] text-slate-500">
-                             <div className="flex flex-col items-center w-1/3">
+                              <div className="flex flex-col items-center w-1/3">
                                 <span className="font-bold text-slate-800 mb-1">2025</span>
                                 <span className="bg-slate-100 px-2 py-1 rounded">한국 → 미/일 판매</span>
-                             </div>
+                              </div>
                              <div className="h-px bg-slate-200 flex-1 mx-2 mt-2"></div>
                              <div className="text-center flex flex-col items-center">
-                                <span className="block font-bold text-slate-600 mb-1">2026</span>
+                                 <span className="block font-bold text-slate-600 mb-1">2026</span>
                                 <span>US/JP <ArrowRight size={8} className="inline"/> KR</span>
                              </div>
                              <div className="h-px bg-slate-200 flex-1 mx-2 mt-2"></div>
                              <div className="text-center flex flex-col items-center">
                                 <span className="block font-bold text-cyan-600 mb-1">2027</span>
-                                <span className="bg-cyan-50 text-cyan-700 px-2 py-1 rounded font-bold border border-cyan-100">Global ↔ Global</span>
+                                 <span className="bg-cyan-50 text-cyan-700 px-2 py-1 rounded font-bold border border-cyan-100">Global ↔ Global</span>
                              </div>
                           </div>
                        </div>
@@ -975,7 +981,7 @@ const CSPWhitepaper = () => {
 
                  <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden group ring-1 ring-slate-100">
                     <div className="bg-gradient-to-r from-slate-900 to-slate-800 p-6 flex justify-between items-center text-white">
-                       <h3 className="font-bold text-lg flex items-center gap-3">
+                        <h3 className="font-bold text-lg flex items-center gap-3">
                           <Coins className="text-violet-400" size={24}/> On-chain Governance
                        </h3>
                        <span className="bg-violet-500 text-white text-[11px] font-black px-3 py-1.5 rounded-full shadow-lg shadow-violet-500/30">Trust Protocol</span>
@@ -987,13 +993,13 @@ const CSPWhitepaper = () => {
                        
                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                           <div className="bg-violet-50/50 p-4 rounded-2xl border border-violet-100 text-center relative group-hover:bg-violet-50 transition-colors">
-                             <div className="w-10 h-10 mx-auto bg-white rounded-full flex items-center justify-center text-violet-600 mb-3 border border-violet-100 font-bold text-sm shadow-sm">01</div>
+                              <div className="w-10 h-10 mx-auto bg-white rounded-full flex items-center justify-center text-violet-600 mb-3 border border-violet-100 font-bold text-sm shadow-sm">01</div>
                              <strong className="block text-sm text-slate-900 mb-1">Vote</strong>
                              <span className="text-[10px] text-slate-500 block">DAO 가중치 투표</span>
                           </div>
                           <div className="bg-violet-50/50 p-4 rounded-2xl border border-violet-100 text-center relative group-hover:bg-violet-50 transition-colors">
                              <div className="absolute top-1/2 -left-3 w-6 h-px bg-violet-200 hidden md:block"></div>
-                             <div className="w-10 h-10 mx-auto bg-white rounded-full flex items-center justify-center text-violet-600 mb-3 border border-violet-100 font-bold text-sm shadow-sm">02</div>
+                              <div className="w-10 h-10 mx-auto bg-white rounded-full flex items-center justify-center text-violet-600 mb-3 border border-violet-100 font-bold text-sm shadow-sm">02</div>
                              <strong className="block text-sm text-slate-900 mb-1">Execute</strong>
                              <span className="text-[10px] text-slate-500 block">Smart Escrow 집행</span>
                           </div>
@@ -1009,7 +1015,7 @@ const CSPWhitepaper = () => {
                           <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest block mb-3 text-center">Development Phases</span>
                           <div className="flex justify-between items-center text-[10px] text-slate-500 relative">
                              <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-200 -z-10"></div>
-                             <span className="bg-white px-2 py-1 rounded border border-slate-200 relative z-10">설계</span>
+                              <span className="bg-white px-2 py-1 rounded border border-slate-200 relative z-10">설계</span>
                              <span className="bg-white px-2 py-1 rounded border border-violet-200 text-violet-700 font-bold relative z-10 shadow-sm">파일럿</span>
                              <span className="bg-white px-2 py-1 rounded border border-slate-200 relative z-10">시범운영</span>
                              <span className="bg-white px-2 py-1 rounded border border-slate-200 relative z-10">DAO</span>
@@ -1040,7 +1046,7 @@ const CSPWhitepaper = () => {
                  <div className="bg-slate-900 text-white px-8 py-4 rounded-2xl shadow-xl inline-flex flex-col items-center border-4 border-slate-100">
                     <span className="text-xs font-bold text-blue-400 mb-1">STRATEGIC HUB</span>
                     <h3 className="text-2xl font-black tracking-tight">CSP</h3>
-                    <p className="text-[10px] text-slate-400 mt-1">Community Scale-up Partners</p>
+                     <p className="text-[10px] text-slate-400 mt-1">Community Scale-up Partners</p>
                  </div>
                  {/* Connector Lines */}
                  <div className="absolute top-full left-1/2 -translate-x-1/2 h-8 w-0.5 bg-slate-300"></div>
@@ -1054,7 +1060,7 @@ const CSPWhitepaper = () => {
                  <div className="bg-slate-50 p-6 rounded-3xl border border-slate-200 relative group hover:border-slate-300 transition-colors">
                     <div className="absolute -top-3 left-8 bg-white border border-slate-200 px-3 py-1 rounded-full text-[10px] font-bold text-slate-500 shadow-sm flex items-center gap-1">
                        <Anchor size={12} className="text-pink-600"/> REGIONAL HUBS
-                    </div>
+                     </div>
                     <h3 className="font-bold text-lg mb-6 text-slate-900 flex items-center gap-2">
                        Anchor Partners
                        <span className="text-xs font-normal text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-100">연결기업</span>
@@ -1068,10 +1074,10 @@ const CSPWhitepaper = () => {
                        ].map((item, i) => (
                           <div key={i} className="bg-white p-3 rounded-xl border border-slate-100 hover:shadow-md transition-shadow">
                              <div className="flex justify-between items-start mb-2">
-                                <span className="text-[10px] font-bold text-pink-600 bg-pink-50 px-1.5 py-0.5 rounded">{item.loc}</span>
+                                 <span className="text-[10px] font-bold text-pink-600 bg-pink-50 px-1.5 py-0.5 rounded">{item.loc}</span>
                                 <span className="text-[9px] text-slate-400">{item.role}</span>
                              </div>
-                             <strong className="block text-sm text-slate-900 mb-1">{item.name}</strong>
+                              <strong className="block text-sm text-slate-900 mb-1">{item.name}</strong>
                              <p className="text-[10px] text-slate-500 leading-tight">{item.desc}</p>
                           </div>
                        ))}
@@ -1083,11 +1089,11 @@ const CSPWhitepaper = () => {
                     <div className="absolute -top-3 left-8 bg-white border border-slate-200 px-3 py-1 rounded-full text-[10px] font-bold text-slate-500 shadow-sm flex items-center gap-1">
                        <Layers size={12} className="text-blue-600"/> FUNCTIONAL EXPERTS
                     </div>
-                    <h3 className="font-bold text-lg mb-6 text-slate-900 flex items-center gap-2">
+                     <h3 className="font-bold text-lg mb-6 text-slate-900 flex items-center gap-2">
                        Content Partners
                        <span className="text-xs font-normal text-slate-500 bg-white px-2 py-0.5 rounded border border-slate-100">파트너기업</span>
                     </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                        {[
                           {name: '비로컬 (BELOCAL)', role: 'Media', desc: '로컬 미디어, 창업 교육, 브랜딩 컨설팅'},
                           {name: '아트스퀘어', role: 'Art', desc: '아트 콘텐츠, 전시기획, 예술품 공동투자'},
@@ -1133,13 +1139,13 @@ const CSPWhitepaper = () => {
                    ].map((d, i) => (
                       <div key={i} className="flex-1 flex flex-col justify-end items-center group relative h-full">
                          {/* Anchor Bar (Bottom) */}
-                         <div className="w-full max-w-[20px] bg-slate-800 rounded-b-md relative z-10" style={{height: `${d.a * 1.5}%`}}>
+                          <div className="w-full max-w-[20px] bg-slate-800 rounded-b-md relative z-10" style={{height: `${d.a * 1.5}%`}}>
                             <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-bold text-slate-600">{d.a}</span>
                          </div>
                          {/* Partner Bar (Top Stacked visually but separate) */}
                          <div className="w-full max-w-[20px] bg-pink-500 rounded-t-md mb-0.5 relative z-10" style={{height: `${d.p * 1.5}%`}}>
                             <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-[9px] font-bold text-pink-600">{d.p}</span>
-                         </div>
+                          </div>
                          <div className="mt-3 text-xs font-bold text-slate-400 group-hover:text-slate-900">{d.y}</div>
                       </div>
                    ))}
@@ -1170,7 +1176,7 @@ const CSPWhitepaper = () => {
                       {t: '상장 (SPAC/BDC)', d: '2027-28', i: <Rocket size={20}/>},
                       {t: '재투자/확장', d: '2028~', i: <RefreshCw size={20}/>},
                    ].map((step, idx) => (
-                      <div key={idx} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center w-full md:w-40 relative z-10 hover:-translate-y-1 transition-transform">
+                   <div key={idx} className="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center w-full md:w-40 relative z-10 hover:-translate-y-1 transition-transform">
                          <div className="w-10 h-10 bg-slate-50 rounded-full flex items-center justify-center text-slate-600 mb-2">{step.i}</div>
                          <strong className="block text-sm text-slate-900">{step.t}</strong>
                          <span className="text-xs text-slate-400">{step.d}</span>
@@ -1179,7 +1185,7 @@ const CSPWhitepaper = () => {
                 </div>
 
                 {/* Detailed Timeline Table */}
-                <div className="overflow-hidden border border-slate-200 rounded-xl">
+                 <div className="overflow-hidden border border-slate-200 rounded-xl">
                    <div className="grid grid-cols-4 bg-slate-50 text-xs font-bold text-slate-500 uppercase tracking-wider py-3 px-4 border-b border-slate-200">
                       <div>Period</div>
                       <div className="col-span-3">Key Milestones</div>
@@ -1194,17 +1200,17 @@ const CSPWhitepaper = () => {
                          </div>
                       </div>
                       <div className="grid grid-cols-4 py-4 px-4 hover:bg-slate-50/50">
-                         <div className="text-sm font-bold text-slate-900">2026년</div>
+                          <div className="text-sm font-bold text-slate-900">2026년</div>
                          <div className="col-span-3 text-sm text-slate-600 space-y-1">
                             <p>• <span className="font-bold text-blue-600">확장:</span> 2차 연계기업 M&A 및 전국 20개 거점 확보</p>
-                            <p>• <span className="font-bold text-blue-600">펀드:</span> 지역성장펀드 결성 및 자회사 지분 펀드 편입</p>
+                             <p>• <span className="font-bold text-blue-600">펀드:</span> 지역성장펀드 결성 및 자회사 지분 펀드 편입</p>
                             <p>• <span className="text-slate-400">시스템:</span> 운영 대시보드 오픈 및 온체인 정산 시범</p>
                          </div>
                       </div>
                       <div className="grid grid-cols-4 py-4 px-4 hover:bg-slate-50/50">
                          <div className="text-sm font-bold text-slate-900">2027년~</div>
                          <div className="col-span-3 text-sm text-slate-600 space-y-1">
-                            <p>• <span className="font-bold text-pink-600">Exit:</span> SPAC 합병 상장 (2027) / BDC 상장 추진 (2028)</p>
+                             <p>• <span className="font-bold text-pink-600">Exit:</span> SPAC 합병 상장 (2027) / BDC 상장 추진 (2028)</p>
                             <p>• <span className="font-bold text-pink-600">Global:</span> 글로벌 크로스보더 플랫폼 전면 가동</p>
                          </div>
                       </div>
@@ -1219,6 +1225,7 @@ const CSPWhitepaper = () => {
              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-blue-900/50 to-transparent pointer-events-none"></div>
              
              <div className="relative h-80 md:h-96 mb-8 pt-10 px-2 md:px-12">
+               
                 <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" style={{paddingBottom: '1.5rem', paddingLeft: '1rem', paddingRight: '1rem'}}>
                    <defs>
                       <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
@@ -1258,7 +1265,7 @@ const CSPWhitepaper = () => {
                 <div className="absolute left-[35%] bottom-[50%] group">
                    <div className="relative">
                       <div className="w-4 h-4 bg-cyan-400 rounded-full border-4 border-slate-900 shadow-[0_0_15px_rgba(34,211,238,0.5)] z-10 relative"></div>
-                       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-36 bg-slate-800/90 backdrop-blur border border-slate-700 p-3 rounded-xl text-center shadow-xl transition-transform hover:scale-110 duration-300 z-20">
+                      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-36 bg-slate-800/90 backdrop-blur border border-slate-700 p-3 rounded-xl text-center shadow-xl transition-transform hover:scale-110 duration-300 z-20">
                          <span className="text-xs text-slate-400 block mb-1">Expansion</span>
                          <strong className="text-2xl text-white font-black block">55.5억</strong>
                          <span className="text-[10px] text-cyan-400">2026년</span>
@@ -1267,7 +1274,7 @@ const CSPWhitepaper = () => {
                    <div className="absolute top-4 left-1.5 w-px h-[140px] bg-cyan-400/20 border-r border-dashed border-cyan-400/50"></div>
                 </div>
 
-                <div className="absolute right-[5%] top-[5%] group">
+                 <div className="absolute right-[5%] top-[5%] group">
                    <div className="relative">
                       <div className="w-6 h-6 bg-pink-500 rounded-full border-4 border-slate-900 shadow-[0_0_20px_rgba(236,72,153,0.8)] z-10 relative animate-pulse-slow"></div>
                        <div className="absolute right-0 md:right-8 top-8 md:top-0 w-36 md:w-40 bg-pink-900/80 backdrop-blur border border-pink-500/50 p-4 rounded-xl text-right shadow-2xl transition-transform hover:scale-105 duration-300 z-20">
@@ -1315,7 +1322,7 @@ const CSPWhitepaper = () => {
                          <span className="text-[8px] md:text-[10px] text-slate-500 block">Entrepreneur</span>
                       </div>
                       <div className="absolute top-[30%] right-0 translate-x-4 md:translate-x-8 text-center z-10">
-                         <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-md mb-2 mx-auto text-emerald-600 border border-emerald-50"><Leaf size={16} className="md:w-5 md:h-5"/></div>
+                          <div className="w-8 h-8 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center shadow-md mb-2 mx-auto text-emerald-600 border border-emerald-50"><Leaf size={16} className="md:w-5 md:h-5"/></div>
                          <strong className="text-xs md:text-sm font-bold text-slate-900 bg-white/80 px-2 rounded">브랜드</strong>
                          <span className="text-[8px] md:text-[10px] text-slate-500 block">Brand</span>
                       </div>
@@ -1340,7 +1347,7 @@ const CSPWhitepaper = () => {
                 <div className="space-y-4">
                    <div className="text-left mb-6 border-l-4 border-emerald-500 pl-4">
                       <h3 className="text-2xl font-black text-slate-900">나비성장모델 (LICORN KPI)</h3>
-                      <p className="text-sm text-slate-500 mt-1">로컬 브랜드의 지속가능한 성장을 위한 5대 핵심 지표</p>
+                       <p className="text-sm text-slate-500 mt-1">로컬 브랜드의 지속가능한 성장을 위한 5대 핵심 지표</p>
                    </div>
                    
                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-4 items-start group">
@@ -1362,7 +1369,7 @@ const CSPWhitepaper = () => {
                       </div>
                    </div>
                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-4 items-start group">
-                      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
+                       <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
                          <BriefcaseBusiness size={24}/>
                       </div>
                       <div>
@@ -1371,7 +1378,7 @@ const CSPWhitepaper = () => {
                       </div>
                    </div>
                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-4 items-start group">
-                      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
+                       <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
                          <Store size={24}/>
                       </div>
                       <div>
@@ -1380,7 +1387,7 @@ const CSPWhitepaper = () => {
                       </div>
                    </div>
                    <div className="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all flex gap-4 items-start group">
-                      <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
+                       <div className="w-12 h-12 bg-slate-50 rounded-xl flex items-center justify-center text-slate-400 group-hover:bg-emerald-50 group-hover:text-emerald-600 transition-colors shrink-0">
                          <Map size={24}/>
                       </div>
                       <div>
@@ -1417,7 +1424,7 @@ const CSPWhitepaper = () => {
                    <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-100 text-center hover:bg-slate-100 transition-colors">
                       <strong className="block text-xs font-bold text-blue-600 mb-1 uppercase tracking-wider">{item.t}</strong>
                       <span className="text-[11px] text-slate-500 font-medium">{item.d}</span>
-                   </div>
+                  </div>
                 ))}
              </div>
 
@@ -1443,11 +1450,11 @@ const CSPWhitepaper = () => {
                       <div className="w-12 h-12 rounded-xl bg-red-700 text-white flex items-center justify-center font-black text-xl shadow-md shrink-0">8</div>
                       <div>
                          <span className="text-[10px] font-bold text-red-700 uppercase tracking-wider bg-red-50 px-2 py-0.5 rounded border border-red-100 mb-1 inline-block">Decent Work</span>
-                         <h4 className="text-lg font-bold text-slate-900">양질의 일자리와 경제성장</h4>
+                          <h4 className="text-lg font-bold text-slate-900">양질의 일자리와 경제성장</h4>
                       </div>
                    </div>
                    <p className="text-sm text-slate-600 leading-relaxed pl-16 border-l-2 border-red-100">
-                      지역경영회사를 <strong>스케일업(Scale-up)</strong>하여 지역 내 고용을 확대하고, 민간 투자를 유치하여 자생적인 지역 경제 성장을 견인합니다.
+                       지역경영회사를 <strong>스케일업(Scale-up)</strong>하여 지역 내 고용을 확대하고, 민간 투자를 유치하여 자생적인 지역 경제 성장을 견인합니다.
                    </p>
                 </div>
 
@@ -1457,11 +1464,11 @@ const CSPWhitepaper = () => {
                       <div className="w-12 h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center font-black text-xl shadow-md shrink-0">11</div>
                       <div>
                          <span className="text-[10px] font-bold text-orange-600 uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded border border-orange-100 mb-1 inline-block">Sustainable Cities</span>
-                         <h4 className="text-lg font-bold text-slate-900">지속가능한 도시와 공동체</h4>
+                          <h4 className="text-lg font-bold text-slate-900">지속가능한 도시와 공동체</h4>
                       </div>
                    </div>
                    <p className="text-sm text-slate-600 leading-relaxed pl-16 border-l-2 border-orange-100">
-                      유휴 공간과 생활 SOC를 <strong>지역 거점(Anchor)</strong>으로 전환하고, 민관 협력 거버넌스를 구축하여 도시의 회복력(Resilience)을 높입니다.
+                       유휴 공간과 생활 SOC를 <strong>지역 거점(Anchor)</strong>으로 전환하고, 민관 협력 거버넌스를 구축하여 도시의 회복력(Resilience)을 높입니다.
                    </p>
                 </div>
 
@@ -1471,7 +1478,7 @@ const CSPWhitepaper = () => {
                       <div className="w-12 h-12 rounded-xl bg-yellow-500 text-white flex items-center justify-center font-black text-xl shadow-md shrink-0">12</div>
                       <div>
                          <span className="text-[10px] font-bold text-yellow-600 uppercase tracking-wider bg-yellow-50 px-2 py-0.5 rounded border border-yellow-100 mb-1 inline-block">Responsible Consumption</span>
-                         <h4 className="text-lg font-bold text-slate-900">책임 있는 소비와 생산</h4>
+                          <h4 className="text-lg font-bold text-slate-900">책임 있는 소비와 생산</h4>
                       </div>
                    </div>
                    <p className="text-sm text-slate-600 leading-relaxed pl-16 border-l-2 border-yellow-100">
@@ -1486,7 +1493,7 @@ const CSPWhitepaper = () => {
         {/* --- 07. CEO EPILOGUE (New Section) --- */}
         <section className="py-24 md:py-32 bg-slate-900 text-white relative overflow-hidden">
            {/* Abstract Background */}
-           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
               <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                  <path d="M0 100 C 20 0 50 0 100 100 Z" fill="url(#epilogueGradient)" />
                  <defs>
@@ -1502,7 +1509,7 @@ const CSPWhitepaper = () => {
               <div className="mb-10 inline-block p-4 rounded-full bg-white/5 border border-white/10">
                  <MessageSquareQuote size={48} className="text-blue-400" />
               </div>
-              
+               
               <h2 className="text-3xl md:text-5xl lg:text-6xl font-black mb-12 leading-tight">
                  "좋은 기업이<br/>
                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">좋은 도시</span>를 만듭니다."
@@ -1524,7 +1531,7 @@ const CSPWhitepaper = () => {
               <div className="flex flex-col items-center">
                  {/* Signature Effect */}
                  <div className="font-serif italic text-xl md:text-2xl text-slate-400 mb-2">Min Wook-jo</div>
-                 <div className="h-px w-20 bg-slate-700 mb-2"></div>
+                  <div className="h-px w-20 bg-slate-700 mb-2"></div>
                  <span className="text-xs md:text-sm font-bold text-slate-500 uppercase tracking-widest">Representative Partner, CSP</span>
               </div>
            </div>
@@ -1538,7 +1545,7 @@ const CSPWhitepaper = () => {
                  <h3 className="text-xl font-bold text-slate-900">Terminologies</h3>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
                  {[
                     {t: 'Venture Studio (벤처 스튜디오)', d: '내부에서 아이디어를 발굴해 직접 인력과 자본을 투입, 창업부터 성장(Scale-up), 회수(Exit)까지 전 과정을 주도하는 컴퍼니 빌더 모델.'},
                     {t: 'Area Management Company (지역경영회사)', d: '단일 건물을 넘어, 지역 단위로 공간·콘텐츠·커뮤니티를 통합 관리하여 도시의 가치를 높이고 자립형 경제를 만드는 운영 방식.'},
@@ -1549,13 +1556,13 @@ const CSPWhitepaper = () => {
                     {t: 'SPAC / BDC', d: 'SPAC은 기업 인수 목적의 상장 회사, BDC는 비상장 기업에 투자하는 상장형 사업개발회사로 CSP의 주요 회수(Exit) 전략.'},
                  ].map((term, i) => (
                     <div key={i} className="flex gap-4 items-start">
-                       <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0"></div>
+                        <div className="w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 shrink-0"></div>
                        <div>
                           <strong className="block text-sm text-slate-900 mb-1">{term.t}</strong>
-                          {/* Visual for TCJTC specific entry */}
+                           {/* Visual for TCJTC specific entry */}
                           {term.t.includes('TCJTC') ? (
                              <div className="mt-2 mb-2 p-2 bg-emerald-50 rounded border border-emerald-100 flex items-center justify-between text-[10px] text-emerald-700 font-bold">
-                                <span>Traffic</span> <ArrowRight size={10}/> <span>Capital</span> <ArrowRight size={10}/> <span>Jobs</span> <Repeat size={10}/>
+                                 <span>Traffic</span> <ArrowRight size={10}/> <span>Capital</span> <ArrowRight size={10}/> <span>Jobs</span> <Repeat size={10}/>
                              </div>
                           ) : null}
                           <p className="text-xs text-slate-500 leading-relaxed">{term.d}</p>
@@ -1566,7 +1573,7 @@ const CSPWhitepaper = () => {
            </div>
         </section>
 
-        {/* --- EXPLORE MORE LINKS --- */}
+         {/* --- EXPLORE MORE LINKS --- */}
         <section className="py-20 bg-white border-t border-slate-200">
            <div className="max-w-5xl mx-auto px-6 md:px-12">
               <div className="flex items-center gap-3 mb-8">
@@ -1604,7 +1611,7 @@ const CSPWhitepaper = () => {
                     <div className="bg-white p-3 rounded-xl mb-4 text-violet-600 shadow-sm group-hover:bg-violet-600 group-hover:text-white transition-colors">
                        <FileText size={24}/>
                     </div>
-                    <strong className="text-sm font-bold text-slate-900 mb-2 group-hover:text-violet-700">공동연구 칼럼</strong>
+                     <strong className="text-sm font-bold text-slate-900 mb-2 group-hover:text-violet-700">공동연구 칼럼</strong>
                     <p className="text-xs text-slate-500 leading-relaxed">비로컬과 함께 연구한 지역경제 활성화 생태계 심층 분석</p>
                  </button>
 
@@ -1613,7 +1620,7 @@ const CSPWhitepaper = () => {
                     className="flex flex-col items-start p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all text-left h-full group"
                  >
                     <div className="bg-white p-3 rounded-xl mb-4 text-pink-600 shadow-sm group-hover:bg-pink-600 group-hover:text-white transition-colors">
-                       <PieChart size={24}/>
+                        <PieChart size={24}/>
                     </div>
                     <strong className="text-sm font-bold text-slate-900 mb-2 group-hover:text-pink-700">공동연구 인포그래픽</strong>
                     <p className="text-xs text-slate-500 leading-relaxed">데이터로 보는 지역 경제 선순환 모델 시각화 자료</p>
@@ -1628,7 +1635,7 @@ const CSPWhitepaper = () => {
       <footer className="bg-slate-50 border-t border-slate-200 pt-20 pb-12">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="inline-flex h-16 px-6 bg-slate-900 rounded-2xl items-center justify-center text-white font-bold text-2xl shadow-xl mb-6">CSP</div>
-          <h2 className="text-3xl font-black text-slate-900 mb-4">Join the Scale-up</h2>
+           <h2 className="text-3xl font-black text-slate-900 mb-4">Join the Scale-up</h2>
           <p className="text-slate-600 mb-8 max-w-md mx-auto text-sm">
             지속 가능한 지역경제 생태계, CSP와 함께 설계하십시오.
           </p>
@@ -1644,7 +1651,7 @@ const CSPWhitepaper = () => {
 
           <div className="text-[10px] text-slate-400 border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p>© 2025 CSP Inc. All rights reserved.</p>
-            <p>Based on CSP Corporate Strategic Deck v2.5</p>
+             <p>Based on CSP Corporate Strategic Deck v2.5</p>
           </div>
         </div>
       </footer>
