@@ -17,6 +17,8 @@ const CSPWhitepaper = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [errorMsg, setErrorMsg] = useState('');
+  // 사용자가 모바일 가로 모드 안내를 닫았는지 확인하는 상태 추가
+  const [isAlertDismissed, setIsAlertDismissed] = useState(false);
 
   // 비밀번호 확인 로직
   const handleLogin = (e) => {
@@ -90,7 +92,7 @@ const CSPWhitepaper = () => {
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900 pb-20 overflow-x-hidden relative">
       
       {/* --- Mobile Landscape Alert Overlay --- */}
-      {isPortrait && (
+      {isPortrait && !isAlertDismissed && (
         <div className="fixed inset-0 z-50 bg-slate-900/95 backdrop-blur-sm flex flex-col items-center justify-center p-8 text-center text-white animate-in fade-in duration-500">
            <div className="bg-white/10 p-6 rounded-full mb-6 animate-pulse">
               <RotateCcw size={48} className="text-blue-400" />
@@ -105,7 +107,7 @@ const CSPWhitepaper = () => {
               <Smartphone size={14}/> <span>Optimized for Landscape</span>
            </div>
            <button 
-             onClick={() => setIsPortrait(false)}
+             onClick={() => setIsAlertDismissed(true)}
              className="mt-12 text-xs text-slate-400 underline underline-offset-4 hover:text-white"
            >
               세로 모드로 계속 보기 (권장하지 않음)
